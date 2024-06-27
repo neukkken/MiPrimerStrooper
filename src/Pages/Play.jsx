@@ -20,6 +20,12 @@ function getRandomHex(){
 
 export default function Play(){
 
+    let timeDiff = localStorage.getItem('difficulty')
+
+    if(timeDiff == null){
+        localStorage.setItem('difficulty', 5)
+    }
+
     const [colorWord, setColorWord] = useState(getRandomColor())
     const [colorHex, setColorHex] = useState(getRandomHex())
     const [correctWord, setCorrectWord] = useState(0)
@@ -98,9 +104,11 @@ export default function Play(){
         navigate('/')
     }
 
+    
+
     return(
         <>
-            <Timer InitialTime={localStorage.getItem('difficulty')} OnTimeUp={OnHandleTime}/>
+            <Timer InitialTime={timeDiff} OnTimeUp={OnHandleTime}/>
             <h2 style={{color : colorHex}}>{colorWord}</h2> 
             <br />
             <button onClick={() => (checkTrue())}>Verdadero</button>

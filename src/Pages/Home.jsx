@@ -1,5 +1,3 @@
-localStorage.setItem('difficulty', 5)
-
 export default function Home(){
     return(
         <>

@@ -11,6 +11,8 @@ function setDifficulty(Difficulty){
 }
 
 export default function Settings (){
+
+    
     return (
         <>
             <h1>Seleccione la dificultad que desea</h1>
