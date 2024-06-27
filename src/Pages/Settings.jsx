@@ -17,6 +17,8 @@ export default function Settings (){
             <button onClick={() => (setDifficulty('Facil'))}>Facil(5 seg)</button>
             <button onClick={() => (setDifficulty('Medio'))}>Medio(3 seg)</button>
             <button onClick={() => (setDifficulty('Dificil'))}>GOD MODE(1 seg)</button>
+            <br />
+            <h3>Por defecto viene el dificultad Media</h3>
         </>
     )
 }
